@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — The Natural GLP-1 Fix</title>
+<meta name="description" content="Your copy of The Natural GLP-1 Fix is on its way. Join the mailing list for updates, extras, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #3d5a47;
+    --sage-light: #5a7a63;
+    --sage-pale: #e8f0ea;
+    --sage-mist: #f2f6f3;
+    --warm-white: #faf8f5;
+    --ink: #1c1c1a;
+    --ink-mid: #3d3d38;
+    --ink-muted: #6b6b62;
+    --ink-faint: #9b9b8f;
+    --accent: #b85c38;
+    --accent-light: #f2e8e3;
+    --border: rgba(61,90,71,0.15);
+    --font-display: 'Lora', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--warm-white);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* NAV */
+  nav {
+    background: rgba(250,248,245,0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--sage);
+    font-style: italic;
+  }
+
+  /* MAIN */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    max-width: 580px;
+    width: 100%;
+  }
+
+  /* CONFIRMATION CARD */
+  .confirm-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .check-circle {
+    width: 72px;
+    height: 72px;
+    background: var(--sage-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.75rem;
+    animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+  }
+
+  .check-circle svg {
+    width: 32px;
+    height: 32px;
+    color: var(--sage);
+  }
+
+  .confirm-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.75rem;
+  }
+
+  .confirm-card h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .confirm-card h1 em {
+    color: var(--sage);
+    font-style: italic;
+  }
+
+  .confirm-card p {
+    color: var(--ink-muted);
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 300;
+    max-width: 42ch;
+    margin: 0 auto;
+  }
+
+  .confirm-card p strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--border);
+    margin: 2rem auto;
+  }
+
+  /* WHAT'S NEXT */
+  .next-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+
+  .next-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--sage-mist);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--sage);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .step-content-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .step-content-desc {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  /* EMAIL SIGNUP */
+  .signup-card {
+    background: var(--sage);
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    animation: fadeUp 0.6s ease 0.2s both;
+  }
+
+  .signup-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.75rem;
+  }
+
+  .signup-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+  }
+
+  .signup-card h2 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .signup-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+    max-width: 38ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-form {
+    display: flex;
+    gap: 10px;
+    max-width: 420px;
+    margin: 0 auto 1rem;
+  }
+
+  .signup-input {
+    flex: 1;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    padding: 12px 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: white;
+    outline: none;
+    transition: background 0.2s, border-color 0.2s;
+    min-width: 0;
+  }
+
+  .signup-input::placeholder { color: rgba(255,255,255,0.45); }
+
+  .signup-input:focus {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  .signup-btn {
+    background: white;
+    color: var(--sage);
+    border: none;
+    border-radius: 100px;
+    padding: 12px 22px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .signup-btn:hover {
+    background: var(--sage-pale);
+    transform: translateY(-1px);
+  }
+
+  .signup-btn:active { transform: translateY(0); }
+
+  .signup-fine {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+
+  /* SUCCESS STATE */
+  .signup-success {
+    display: none;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 0 auto 1rem;
+    max-width: 420px;
+  }
+
+  .signup-success.visible { display: flex; align-items: center; gap: 12px; }
+
+  .signup-success svg {
+    width: 20px; height: 20px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .signup-success-text {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  /* PERKS LIST */
+  .perks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .perk {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .perk svg {
+    width: 14px;
+    height: 14px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* BACK LINK */
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 13px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--sage); }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    main { padding: 2rem 1rem; }
+
+    .confirm-card { padding: 2.5rem 1.5rem; }
+    .signup-card { padding: 2rem 1.5rem; }
+
+    .signup-form {
+      flex-direction: column;
+    }
+
+    .signup-input, .signup-btn {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .perks { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">The Natural GLP-1 Fix</span>
+</nav>
+
+<!-- MAIN -->
+<main>
+  <div class="container">
+
+    <!-- CONFIRMATION -->
+    <div class="confirm-card">
+      <div class="check-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+
+      <div class="confirm-eyebrow">Purchase confirmed</div>
+      <h1>You're all set. <em>Let's get started.</em></h1>
+
+      <p>
+        Check your email for your download link from Gumroad — it should arrive within a minute or two.
+        If it doesn't show up, <strong>check your spam folder</strong> and mark it as not spam so future messages get through.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="next-steps">
+        <div class="next-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-content-title">Download your PDF</div>
+            <div class="step-content-desc">Click the link in your Gumroad email to download the book. Save it somewhere you'll find it — your Downloads folder, iBooks, Kindle, or a cloud drive all work well.</div>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-content-title">Start with Chapters 1 and 2</div>
+            <div class="step-content-desc">The science chapters lay the foundation for everything else. Even if you're eager to get to the protocols, understanding why the system works the way it does makes every subsequent chapter more useful.</div>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-content-title">Go to Chapter 11 next</div>
+            <div class="step-content-desc">If you want to start acting before you've finished reading, the Foundation Protocol in Chapter 11 can begin immediately — no supplements required.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMAIL SIGNUP -->
+    <div class="signup-card">
+      <div class="signup-eyebrow">One more thing</div>
+      <h2>Stay in the loop as <em>the research evolves</em></h2>
+      <p>
+        This field moves fast. Join the mailing list for updates when new studies land, reader questions worth answering, and anything else worth sharing.
+      </p>
+
+      <div class="perks">
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          No spam, ever
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Unsubscribe any time
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Reader questions answered
+        </div>
+      </div>
+
+      <form class="signup-form" id="signupForm" onsubmit="handleSignup(event)">
+        <input
+          type="email"
+          class="signup-input"
+          id="emailInput"
+          placeholder="your@email.com"
+          required
+          autocomplete="email"
+        >
+        <button type="submit" class="signup-btn">Subscribe →</button>
+      </form>
+
+      <div class="signup-success" id="signupSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <div class="signup-success-text">
+          <strong style="display:block; color: white; margin-bottom: 2px;">You're subscribed.</strong>
+          Thanks for joining — you'll hear from me when there's something worth sharing.
+        </div>
+      </div>
+
+      <div class="signup-fine" id="signupFine">
+        Your email address is only used for updates related to this book.<br>
+        No selling your data. No third-party marketing. Just the list.
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to the book page</a>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-text">
+    © 2025 The Natural GLP-1 Fix · This book is for informational purposes only and does not constitute medical advice.
+  </div>
+</footer>
+
+<script>
+function handleSignup(e) {
+  e.preventDefault();
+  const email = document.getElementById('emailInput').value;
+  const form = document.getElementById('signupForm');
+  const success = document.getElementById('signupSuccess');
+  const fine = document.getElementById('signupFine');
+
+  // REPLACE THIS with your actual email service submission
+  // Options: Mailchimp, Kit (ConvertKit), or any form endpoint
+  // Example for Mailchimp:
+  // fetch('YOUR_MAILCHIMP_FORM_ACTION_URL', { method: 'POST', body: new FormData(e.target) })
+  // Example for Kit (ConvertKit):
+  // fetch('https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ email_address: email })
+  // })
+
+  // For now, just show the success state:
+  form.style.display = 'none';
+  fine.style.display = 'none';
+  success.classList.add('visible');
+
+  console.log('Email to capture:', email);
+}
+</script>
+
+</body>
+</html>
